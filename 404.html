@@ -1,0 +1,17 @@
+<html>
+<script>
+            // get the base URL and split it
+            const Url = window.location.href.split("https://")[1].split("www.")[1];
+
+            // get the browser language
+            const browserLanguage = navigator.language || navigator.userLanguage;
+            const pcLanguage = Intl.DateTimeFormat().resolvedOptions().locale;
+
+            // redirect based on language and base URL
+            if (browserLanguage.includes("ja") || pcLanguage.includes("ja")) {
+              console.log("https://jp." + Url);
+            } else {
+              console.log("https://en." + Url);
+            }
+        </script>
+</html>
