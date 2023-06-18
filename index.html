@@ -9,9 +9,9 @@
 
             // redirect based on language and base URL
             if (browserLanguage.includes("ja") || pcLanguage.includes("ja")) {
-              console.log(Url.replace("www", "jp"));
+              window.location.href = Url.replace("www", "jp");
             } else {
-              console.log(Url.replace("www", "en"));
+              window.location.href = Url.replace("www", "jp");
             }
         </script>
 </html>
