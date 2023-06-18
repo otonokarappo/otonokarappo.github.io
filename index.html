@@ -1,7 +1,7 @@
 <html>
 <script>
             // get the base URL and split it
-            const Url = window.location.href.split(".online/")[0] + ".online/";
+            const Url = window.location.href.split("https://")[1].split("www.")[1];
 
             // get the browser language
             const browserLanguage = navigator.language || navigator.userLanguage;
@@ -9,9 +9,9 @@
 
             // redirect based on language and base URL
             if (browserLanguage.includes("ja") || pcLanguage.includes("ja")) {
-              window.location.href = Url + "jp/";
+              window.location.href = "jp." + Url;
             } else {
-              window.location.href = Url + "en/";
+              window.location.href = "en." + Url;
             }
         </script>
 </html>
